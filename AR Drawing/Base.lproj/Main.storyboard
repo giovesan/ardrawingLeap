@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad10_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AR_Drawing" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nG1-Q1-iTo">
+                                <rect key="frame" x="0.0" y="0.0" width="834" height="1112"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kIh-aW-GNg">
+                                <rect key="frame" x="369.5" y="1049" width="95" height="30"/>
+                                <color key="backgroundColor" red="0.87014248704663211" green="0.87014248704663211" blue="0.87014248704663211" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="GQE-v1-SNR"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="95" id="Lbe-as-pY0"/>
+                                </constraints>
+                                <state key="normal" title="Draw"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9CC-8r-Gfv">
+                                <rect key="frame" x="317" y="77" width="200" height="57"/>
+                                <color key="backgroundColor" red="0.87054918090736721" green="0.0" blue="0.93658921632124359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="8Yc-ID-3RE"/>
+                                    <constraint firstAttribute="width" constant="200" id="xrn-of-bZn"/>
+                                </constraints>
+                                <state key="normal" title="CLEAN">
+                                    <color key="titleColor" red="0.8981441939513688" green="0.8909322683851586" blue="0.93658921632124359" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cleanIsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lw5-cM-VDq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9CC-8r-Gfv" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1s7-ha-u6n"/>
+                            <constraint firstItem="nG1-Q1-iTo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7qj-VW-dMk"/>
+                            <constraint firstItem="kIh-aW-GNg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8RI-Vz-BuR"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kIh-aW-GNg" secondAttribute="trailing" constant="20" symbolic="YES" id="FYi-9P-JWE"/>
+                            <constraint firstItem="nG1-Q1-iTo" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="KrG-np-tsK"/>
+                            <constraint firstItem="nG1-Q1-iTo" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="WdR-Zp-sIy"/>
+                            <constraint firstItem="nG1-Q1-iTo" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="qFa-eZ-puI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kIh-aW-GNg" secondAttribute="bottom" constant="33" id="scG-Qt-sb5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="draw" destination="kIh-aW-GNg" id="DsJ-qQ-vmF"/>
+                        <outlet property="sceneView" destination="nG1-Q1-iTo" id="6JZ-9q-eeJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="135.97122302158274" y="133.27338129496403"/>
+        </scene>
+    </scenes>
+</document>
